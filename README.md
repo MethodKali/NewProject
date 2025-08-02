@@ -4,7 +4,7 @@ Study
 
 
 ### Comando para gerar uma chave SSH:
-ssh-keygen -t ed25519 -C "kerlesalves@gmail.com"
+ssh-keygen -t ed25519 -C "email@email.com"
 
 ### Comando para copiar a chave SSH gerada:
 eval "$(ssh-agent -s)"
@@ -53,3 +53,42 @@ git log
 git push origin HEAD
 
 1. Prontinho as alterações feitas no arquivo README.md foram carregadas para o Git.
+
+# Branches e Tags
+
+
+## Branches
+
+Agora que aprendemos sobre como fazer alterações em arquivos usando o comando commit vamos entender como funciona a lógica por trás das branches.
+
+Antes de tudo devemos entender nosso repositório no Git como uma linha do tempo, a branch principal ou a main branch. Essa linha do tempo possui alguns marcos históricos que vamos chamá-los de commits, ou seja toda a alteração que ocorreu na main branch é marcada por um commit. 
+
+Existem casos que queremos apenas fazer alguns teste no nosso repositório principal sem que as alterações não interfira no funcionamento do nosso código. Dessa forma criamos uma nova linha do do tempo paralela a linha do tempo principal e todas as alterações feitas nessa nova linha do tempo não irá interferir na main branch.
+
+Para criar uma nova branch escrevemos no git bash:
+
+### Criar Branches
+git branch NomeBranch
+
+Para verificar as branchs já existentes escrevemos:
+### Verificar branchs existentes
+git branch
+
+Para selecionar uma branch existente escrevemos:
+### Selecionar branch existente
+git checkout NomeBranch
+
+#### Nota: Para cada branch selecionada a criação de commits seguem a mesma lógica.
+
+## Tags
+O processo de criação de branchs para testes do projetos, adição de commits e após tudo estar ok é realizado o merge para que a branch teste passa a fazer parte da main branch. Esse processo é destacado como uma atualização da main branch em um numero de versão. Essa versão criada é o que chamamos de Tags para situar as atualizações realizadas na main branch
+
+# Pull Requests
+
+A comunidade Git Hub é formada por desenvolvedores que trabalham em grupos com o objetivo de lançar projetos sendo eles rentaveis ou open source.
+
+Na aba Pull Requests os desenvolvedores comentam, avaliam as atualizações realizadas, indicam possiveis bugs em resumo, é um espaço para coleta, manutenção, avaliação e feedbacks
+
+
+
+
